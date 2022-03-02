@@ -1,8 +1,10 @@
+@import "../../../styles/media-queries";
+@import "../../../styles/variables";
+
 .header {
+  background-color: #efefef;
   width: 100%;
-  padding: 20px;
-  background-color: burlywood;
-  color: white;
+  padding: 0 20px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -12,23 +14,43 @@
   top: 0;
 
   &__scrolled {
-    background-color: green;
+    .logo {
+      width: 120px;
+    }
   }
 }
 
 .logo {
-
+  width: 180px;
+  transition: width .3s ease;
 }
 
 .links {
   display: flex;
+
+  &--link {
+    display: flex;
+    padding: 3px;
+    margin-left: 12px;
+    font-family: $font-family-medium;
+    transition: color .3s ease;
+
+    &:hover {
+      color: $leading-color;
+    }
+
+    &__active {
+      color: $leading-color;
+      border-bottom: 3px solid $leading-color;
+    }
+  }
 }
 
-.link {
-  display: flex;
-  margin-left: 20px;
 
-  &__active {
-    color: red;
+@include apply-after(small) {
+  .header {
+    &--button {
+      padding: 6px 26px;
+    }
   }
 }

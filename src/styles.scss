@@ -1,2 +1,21 @@
 @import "./styles/reset";
 @import "./styles/flex-grid";
+@import "./styles/fonts";
+
+body {
+  box-sizing: border-box;
+  font-family: "font-regular", sans-serif;
+  color: #4A4A4A;
+  font-size: 14px;
+  line-height: 17px;
+  overscroll-behavior: none;
+
+  &::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+  }
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
