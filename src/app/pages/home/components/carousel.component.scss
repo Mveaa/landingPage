@@ -1,0 +1,13 @@
+.carousel {
+  display: flex;
+  flex-direction: row;
+  transition: transform .3s ease;
+
+  &--wrapper {
+    overflow: hidden;
+  }
+
+  &--img {
+    width: 25%;
+  }
+}
